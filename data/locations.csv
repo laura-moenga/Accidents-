@@ -1,0 +1,11 @@
+location_id,type,name
+L001,Rural,Area_1
+L002,Highway,Area_2
+L003,Rural,Area_3
+L004,Highway,Area_4
+L005,City,Area_5
+L006,Intersection,Area_6
+L007,Intersection,Area_7
+L008,Rural,Area_8
+L009,Intersection,Area_9
+L010,Intersection,Area_10
