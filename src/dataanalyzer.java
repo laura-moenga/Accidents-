@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class dataanalyzer {
     public static  Map<String,Integer> getaccidentsbycity(){
-        map<String ,Integer>map =new HashMao<>();
+        map<String ,Integer>map =new HashMap<>();
         String sql = "SELECT city ,count(*)AS total FROM accidents JOIN locations USING (location_id) GROUP BY city";
     try(
     Connection conn = databaseconnection.connect();
