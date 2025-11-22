@@ -12,7 +12,7 @@ public class databaseconnection {
             system.out.println("connetcted to the database ");
             return conn;
         } catch (SQLException e) {
-            system.out.println("database conectio failed!");
+            system.out.println("database conection failed!");
             e.printStackTrace();
             return null;
         }
