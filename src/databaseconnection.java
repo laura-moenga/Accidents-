@@ -1,24 +1,22 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.SQLException;
 
-public class databaseconnection {
-    public static final String URL ="jdbc:mysql://localhost:3306/accidents_db";
-    public static final String USER ="root";
-    public static final String PASSWORD ="";
+public class DatabaseConnection {
+    public static final String URL = "jdbc:mysql://localhost:3306/accident";
+    public static final String USER = "root";
+    public static final String PASSWORD = ""; // Your MySQL password (empty if no password)
+
     public static Connection getConnection() {
         try {
-            Connection conn = null;
-            system.out.println("connetcted to the database ");
+            // Actually create the connection
+            Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println(" Connected to the database successfully!");
             return conn;
         } catch (SQLException e) {
-            system.out.println("database conection failed!");
+            System.out.println(" Database connection failed!");
             e.printStackTrace();
             return null;
         }
     }
-    public static void main(String[]args){
-        connect();
-    }
 }
-
